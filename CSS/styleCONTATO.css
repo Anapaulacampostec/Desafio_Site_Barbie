@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+.wrapper {
+  /*caixa principal que contem as outras dentro dela*/
+  margin: auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction: row; /*temos coluna também*/
+  flex-wrap: wrap; /*quando utiizamos blocos eles ficam um ddo lado do outro mesmo que tenha tamanho total de tela, 
+    então para resolver isso*/
+  justify-content: center; /*alinhando os blocos na horizontal dentro do principal*/
+  align-items: center; /*alinhando os blocos na vertical*/
+  width: 90%;
+  height: auto; /*se ajusta conforme o conteúdo*/
+  background-color: white;
+  padding: 0px; /*espaço entre as caixas e o principal*/
+  box-shadow: 0px 0px 25px rgb(236, 8, 168); /*deslocamento lateral - vertical - espalhamento da sombra - cor*/
+}
+
+.boxLogo {
+  background-color: rgb(236, 8, 168);
+  width: 15%;
+  height: 120px;
+}
+
+.boxTopo {
+  background-color: rgb(236, 8, 168);
+  width: 85%;
+  height: 120px;
+  margin: 0px; /*SEM MARGEM AO REDOR DAS CAIXAS PARA FICAREM JUNTAS*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.boxRodape {
+  background-color: rgb(183, 232, 240);
+  width: 100%;
+  height: 20px;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1em;
+  color: #640f63;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: #640f63;
+  font-weight: bold;
+  text-align: center;
+  right: 60%;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  width: 45%; /*LARGURA DO FORMULÁRIO*/
+  margin: auto; /*PARA FICAR NO CENTRO*/
+}
+
+input,
+textarea {
+  /*FUNDO DA CAIXA DE PREENCHIMENTO DE DADOS*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  background-color: rgb(240, 236, 244);
+}
+
+input:hover,
+textarea:hover {
+  /*quando passar o mouse na caixa de texto mudará de cor*/
+  background-color: rgb(223, 180, 220);
+}
+
+legend {
+  /*FORMATAÇÃO DAS LEGENDAS*/
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#sexo {
+  width: 150px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.conteudo_formulario {
+  width: 100%;
+  height: 600px;
+  margin: 0px;
+  text-align: justify;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #640f63;
+  font-size: large;
+}
+
+.fale {
+  text-align: center;
+  font-size: 25px; /*medida responsiva*/
+  color: #640f63;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+.mensagem {
+  text-align: center;
+  font-size: 10px; /*medida responsiva*/
+  color: #640f63;
+}
+
+.enviar {
+  background-color: #ffffff;
+  color: #640f63;
+}

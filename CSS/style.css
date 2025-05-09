@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+body {
+  background-image: url("../IMAGENS/planodefundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  /*caixa principal que contem as outras dentro dela*/
+  margin: auto; /*centralizar*/
+  display: flex; /*para transformar em blocos*/
+  flex-direction: row; /*temos coluna também*/
+  flex-wrap: wrap; /*quando utiizamos blocos eles ficam um ddo lado do outro mesmo que tenha tamanho total de tela, 
+    então para resolver isso*/
+  justify-content: center; /*alinhando os blocos na horizontal dentro do principal*/
+  align-items: center; /*alinhando os blocos na vertical*/
+  width: 90%;
+  height: auto; /*se ajusta conforme o conteúdo*/
+  background-color: rgb(255, 255, 255);
+  padding: 0px; /*espaço entre as caixas e o principal*/
+  box-shadow: 0px 0px 25px rgb(236, 8, 168); /*deslocamento lateral - vertical - espalhamento da sombra - cor*/
+}
+
+.boxLogo {
+  background-color: rgb(236, 8, 168);
+  width: 15%;
+  height: 120px;
+}
+
+.boxTopo {
+  background-color: rgb(236, 8, 168);
+  width: 85%;
+  height: 120px;
+  margin: 0px; /*SEM MARGEM AO REDOR DAS CAIXAS PARA FICAREM JUNTAS*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.bannerprincipal {
+  width: 100%;
+  height: 600px;
+}
+
+.boxBanner {
+  background-color: rgb(250, 247, 247);
+  width: 100%;
+  height: auto;
+  margin-top: 5px; /*coloquei margem TOP para ficar distante dos menus*/
+}
+
+.boxProdutos {
+  /*temos quatro caixas iguais que terão essa classe. Veja no index*/
+  background-color: rgb(183, 232, 240);
+  width: 20%;
+  height: auto; /*para crecer o tamanho do conteúdo */
+  margin: 2px; /*margem ao redor das caixas para ficarem distantes*/
+  font-size: 1em; /*medida responsiva*/
+  text-align: center;
+  padding: 30px; /*espaçamento dentro dela*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #523852;
+}
+
+.boxProdutos:hover {
+  background-color: #fbd9ee;
+  box-shadow: 0px 4px 4px 0px #3e3b3e;
+}
+
+.boxOferta {
+  align-items: center;
+  justify-content: center;
+}
+
+.oferta {
+  border-radius: 20px;
+  margin: 10px;
+  height: 300px;
+  width: 450px;
+}
+
+.frete {
+  border-radius: 20px;
+  margin: 10px;
+  height: 300px;
+  width: 800px;
+}
+
+.boxRodape {
+  background-color: rgb(183, 232, 240);
+  width: 100%;
+  height: 20px;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.1em;
+  color: #640f63;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.2em;
+  color: rgb(133, 127, 132);
+  font-weight: bold;
+}
+
+p {
+  font-size: 1em;
+  color: rgb(167, 107, 156);
+}
+
+/*.boxbanner para animação*/
+
+.boxBanner {
+  display: anime-block;
+  /*blco na mesma linha e podem ser reajustadas - a diferença do display: inline-block e do display é que 
+    o primeiro pode ser reajustado*/
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-color: rgb(0, 217, 255);
+  margin: 2px auto 0px auto;
+}
+
+.boxBanner img {
+  position: absolute; /*posição absoluta dentro do box banner*/
+  transition-property: opacity; /*transparência*/
+  transition-duration: 1s; /*tempo de duração p carregar a img*/
+  transition-timing-function: linear; /*transição linear*/
+}
+
+.boxBanner #animel1,
+.boxBanner:hover #anime2 {
+  /*ao passar o mouse carregará a segunda img*/
+  opacity: 1;
+} /*a primeira começará 100% visivel*/
+
+.boxBanner:hover #anime1,
+.boxBanner #anime2 {
+  opacity: 0;
+} /*invisível a 1º para a segunda aparecer */
+
+/*fim Banner Anime*/
+
+/*CLASSES PARA IMAGENS PRODUTOS DENTRO DOS BOX*/
+
+.produtos {
+  width: 100%; /*aqui eu coloquei essa medidda para as fotos ter distaque bem grandes*/
+  height: 100%; /*aqui também */
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.preco1 {
+  color: rgba(113, 20, 20, 0.995);
+  text-decoration: line-through;
+}
+
+.preco2 {
+  color: rgb(145, 8, 79);
+  font-weight: bold;
+}
+
+/*Botões do Menu*/
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(0, 217, 255);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right; /*POSSIONAMENTO DO MENU*/
+}
+
+nav ul li {
+  float: left; /*ORDEM QUE APARECERÁ OS BOTÕES - HOME - SERVIÇO .... */
+}
+
+nav ul li a {
+  color: #640f63;
+  text-decoration: none;
+  padding: 15px;
+  display: block; /*Transformar em bloco*/
+}
+
+nav ul li a:hover {
+  /*evento mouse em cima do link*/
+  background-color: #fba7df;
+  transition: all 0.5s; /*efeito de transição*/
+  border-radius: 10px;
+}
+
+form {
+  width: 50%; /*LARGURA DO FORMULÁRIO*/
+  margin: auto; /*PARA FICAR NO CENTRO*/
+}
+
+input,
+textarea {
+  /*FUNDO DA CAIXA DE PREENCHIMENTO DE DADOS*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  background-color: blueviolet;
+}
+
+input:hover,
+textarea:hover {
+  /*quando passar o mouse na caixa de texto mudará de cor*/
+  background-color: rgb(204, 50, 191);
+}
+
+legend {
+  /*FORMATAÇÃO DAS LEGENDAS*/
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+fieldset {
+  /* COLOCAR BORDA NOS ASSUNTOS*/
+  border-color: rgb(233, 227, 229);
+  margin: 20px;
+}
+
+#sexo {
+  width: 150px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+button {
+  background-color: #ffffff;
+  padding: 12px 35px;
+  font-size: 12px;
+  border-radius: 10px;
+  cursor: pointer; /*troquei aqui o cursor*/
+}
+
+button:hover {
+  /*interação quando eu passar o mouse por cima do menu*/
+  background: rgb(244, 241, 244);
+  font-size: 13px; /*cresce a fonte da letra*/
+  border-bottom: solid; /*eu faço um menu sublinhado*/
+}
+
+.banner3 {
+  /*usei para formatar o banner da loja*/
+  border-radius: 20px;
+  margin: 10px;
+  height: 300px;
+  width: 1275px;
+}
+
+.quemsomos {
+  /*temos quatro caixas iguais que terão essa classe. Veja no index*/
+  background-color: rgb(209, 238, 242);
+  width: 28%;
+  height: 500px; /*para crecer o tamanho do conteúdo */
+  margin: 4px; /*margem ao redor das caixas para ficarem distantes*/
+  font-size: 1em; /*medida responsiva*/
+  text-align: center;
+  padding: 30px; /*espaçamento dentro dela*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #3e3b3e;
+  line-height: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px #3e3b3e;
+  transition: 0.5s;
+}
+
+.quemsomos:hover {
+  background-color: #ffffff;
+  transition: all 0.5s; /*efeito de transição*/
+  border-radius: 10px;
+  font-size: 1.1em;
+}
