@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="barbie" />
+    <meta name="keywords" content="barbie" />
+    <!-- Kaywords palavras chaves descrição para encontrar nos sites de busca no google-->
+    <title>MY DREAM - BARBIE</title>
+    <link type="text/css" rel="stylesheet" href="..//CSS/style.css" />
+    <link type="text/css" rel="stylesheet" href="..//CSS/styleCONTATO.css" />
+    <link rel="icon" href="../IMAGENS/icon.ico" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="boxLogo">
+        <a href="index.html">
+          <img src="..//IMAGENS/My Dream.jpg" class="logo" title="logo" />
+        </a>
+        <!--colocar o meu logo ainda tenho que fazer-->
+      </div>
+
+      <div class="boxTopo">
+        <nav>
+          <ul>
+            <li><a href="index.html"> HOME </a></li>
+            <li><a href="loja.html"> LOJA </a></li>
+            <li><a href="quemsomos.html"> QUEM SOMOS</a></li>
+            <li><a href="contato.html"> CONTATO</a></li>
+          </ul>
+        </nav>
+      </div>
+        </main>
+    
+      <div class="conteudo_formulario">
+        <h1 class="fale">FALE CONOSCO</h1>
+        <br />
+
+        <section id="conteudo_formulario">
+          <!--posso utilizar div também-->
+
+          <form method="post" id="fContato" action="anapaula_sud@hotmail.com">
+            <!-- método post para guardar as informações id para chamar no css 
+                e formatar action para qual e-mail 
+            irão os dados temos o method get para pesquisas. ele não guarda o conteúdo-->
+
+            <p>
+              <label for="cNome"> Nome: </label>
+              <input
+                type="text"
+                name="tName"
+                id="cNome"
+                size="30"
+                maxlength="20"
+                placeholder="Digite seu nome aqui"
+                autofocus
+                required
+              />
+            </p>
+
+            <p>
+              <label for="cMail"> E-mail: </label>
+              <input
+                type="email"
+                name="tMail"
+                id="cMail"
+                size="30"
+                maxlength="30"
+                placeholder="Digite seu e-mail aqui"
+                required
+              />
+            </p>
+
+            <p>
+              Data de Nascimento: <input type="date" name="tNasc" id="cNasc" />
+            </p>
+
+            <!--OBS: SE NÃO APARECER O CALENDÁRIO NO NAVEGADOR / 
+            É PQ O NAVEG NÃO É COMPATIVEL COM O TYPE="DATE"... 
+            MESMO ASSIM COLOCAM -->
+
+            <p>
+              <label for="cCid"> Cidade: </label>
+              <input
+                type="text"
+                name="tCid"
+                id="cCid"
+                size="30"
+                maxlength="30"
+                placeholder="Sua Cidade"
+              />
+            </p>
+
+            <p>
+              <label for="cMsg"> Mensagem: </label>
+              <textarea
+                name="tMsg"
+                id="cMsg"
+                cols="36"
+                rows="10"
+                placeholder="Deixe aqui a sua mensagem"
+              >
+              </textarea>
+            </p>
+
+            <input type="submit" name="Enviar" class="enviar" />
+          </form>
+ 
+        </section>
+      </div>
+
+      <!-- RODAPE-->
+      <div class="boxRodape">
+        Todos os direitos Reservado - Ana Paula Campos 2024 - SENAI
+      </div>
+    </div>
+    <!--AQUI FECHO O MEU DIV PRINCIPAL-->
+  </body>
+</html>
